@@ -1,0 +1,25 @@
+1 - install react vite
+2 - tailwind css setup
+3 - components
+4 - container setup
+5 - font-family 
+6 - Layout Components
+7 - React Icon
+
+**********---Header - class-8 (FrontEnd)----******
+1 - dropdown 
+2- useEffect(() => {
+
+},[])
+
+3 - useRef()
+4 - addEventListener("" , {})
+
+
+
+**********----- Header All dropDown class-9-10 ------  ********
+1 - userAccount Dropdown 
+2 - cart Dropdown
+
+**********----- React Router DOM class-11 ------  ********
+1 - 
