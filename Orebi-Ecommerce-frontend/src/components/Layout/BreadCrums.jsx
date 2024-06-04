@@ -1,7 +1,7 @@
 import React from 'react'
-import Flex from '../Layout/Flex'
-import MinTitle from '../Layout/MinTitle'
-import Title from '../Layout/Title'
+import Flex from './Flex'
+import MinTitle from './MinTitle'
+import Title from './Title'
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 const BreadCrums = ({className}) => {
     const pageName = window.location.pathname.split("/")[1]

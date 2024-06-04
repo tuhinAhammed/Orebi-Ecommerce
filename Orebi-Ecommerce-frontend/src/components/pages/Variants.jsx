@@ -21,8 +21,8 @@ const Variants = ({className }) => {
                 setProductData(data.data);
             }
             fetchProduct()
-        },[productData])
-
+        },[])
+ 
 // find Product variant
         const variantItem = productData.find((item) => item._id == productId )
 
@@ -30,7 +30,7 @@ const Variants = ({className }) => {
         <>
          
             <Container>
-            <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 py-12 ${className} flex`}>
+            <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 py-12 z-0 ${className} flex`}>
                 {
                     variantItem?.variants.map((item) => (
                         <Variant className="" variantData ={item}/>

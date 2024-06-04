@@ -1,9 +1,9 @@
 import React from 'react'
 import Container from '../Layout/Container'
 import Flex from '../Layout/Flex'
-import ads1 from "../../../src/assets/Ad_1.png"
-import ads2 from "../../../src/assets/Ad_2.png"
-import ads3 from "../../../src/assets/Ad_3.png"
+import ads1 from "../../assets/Ad_1.png"
+import ads2 from "../../assets/Ad_2.png"
+import ads3 from "../../assets/Ad_3.png"
 const Ads = () => {
   return (
     <>

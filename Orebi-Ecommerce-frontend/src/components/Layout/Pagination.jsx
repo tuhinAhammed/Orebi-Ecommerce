@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ReactPaginate from 'react-paginate';
-import Product from "../Layout/Product"
-import Flex from '../Layout/Flex';
+import Product from "./Product"
+import Flex from './Flex';
 import axios from 'axios';
 import {Link } from "react-router-dom"
 const Pagination = ({ itemsPerPage }) => {

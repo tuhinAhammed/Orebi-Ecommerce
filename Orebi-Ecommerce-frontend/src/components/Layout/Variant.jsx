@@ -1,10 +1,17 @@
 import React, { useEffect } from 'react'
 
 import Flex from './Flex'
-import Button from "../Layout/Button"
+import Button from "./Button"
+import { useDispatch } from 'react-redux'
+import {cartTotal} from "../../Slices/CartSlice"
 const Variant = ({variantData , className}) => {
 
 const {name , price , color , image} = variantData
+const dispatch = useDispatch()
+const handleAddCart = () => {
+    dispatch(cartTotal(variantData))
+    localStorage.setItem("cartStorage" , JSON.stringify(variantData))
+}
 console.log(price);
     return (
         <>
@@ -18,7 +25,8 @@ console.log(price);
                     <p className="productPrice text-secondary text-base">{price}</p>
                 </Flex>
                 <div className="productColor text-base text-secondary">{color}</div>
-                <Button text="Add to cart" className="mt-2 px-20 text-tertiary bg-primary hover:bg-transparent hover:text-primary " />
+                <Button onClick={handleAddCart} text="Add to cart" className="pointer mt-2 px-20 text-tertiary bg-primary hover:bg-transparent hover:text-primary " />
+
             </div>
         </>
     )

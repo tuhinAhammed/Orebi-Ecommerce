@@ -12,16 +12,21 @@ import { FaCartShopping } from "react-icons/fa6";
 import { TiArrowSortedDown } from "react-icons/ti";
 import { ImCross } from "react-icons/im";
 import productImg from "../../assets/productImg.png"
-
+import { useSelector } from 'react-redux';
+import AddToCart from '../Layout/AddToCart';
 
 
 const Header = () => {
+    // fetch redux data for cart
+    const cartData = useSelector(state => state.cartDetails.value)
+    console.log(cartData);
     const [show, setShow] = useState(false)
     const [myAccountShow, setMyAccountShow] = useState(false)
     const [cartShow, setCartShow] = useState(false)
     // const handleClick = () => {
     //     setShow (!show)
     // }
+
     const myRef = useRef()
     const loginRef = useRef()
     const cartRef = useRef()
@@ -75,8 +80,8 @@ const Header = () => {
 
                     </div>
 
-                        <Search className="w-[500px] text-base font-dmSans rounded px-[21px] py-[16px] bg-[#eee] " placeholder="Search Products"></Search>
-                        
+                    <Search className="w-[500px] text-base font-dmSans rounded px-[21px] py-[16px] bg-[#eee] " placeholder="Search Products"></Search>
+
                     <div className='flex gap-[40px] items-center text-sm font-dmSans'>
                         <div className='flex relative cursor-pointer' ref={loginRef}>
                             <FaUser className='text-[18px]' />
@@ -97,19 +102,10 @@ const Header = () => {
                             {
                                 cartShow &&
                                 (
-                                    <div className=" w-[358px] p-[21px] bg-quaternary main-cart absolute right-0 top-[50px]">
-                                        <div className="flex justify-between items-center">
-                                            <div className="product-img w-[80px] h-[80px]">
-                                                <img src={productImg} alt="ok" />
-                                            </div>
-                                            <div className="product-details">
-                                                <h1 className='product-name text-base test-primary bold font-dmSans'>Black Smart Watch</h1>
-                                                <p className='product-name text-base test-primary bold font-dmSans'>$44.00</p>
-                                            </div>
-                                            <div className="cart-delete">
-                                                < ImCross className="product-name text-base test-primary bold" />
-                                            </div>
-                                        </div>
+                                    <div className=" w-[358px] p-[21px] bg-quaternary main-cart absolute right-0 top-[50px] z-50  ">
+                                        {
+                                            cartData ? <AddToCart cartData={cartData} /> : "Empty Cart"
+                                        }
                                         <div className="total-price pt-[34px] pb-[13px]">
                                             <p className='text-base'>Subtotal: <span className='font-bold'>$44.00</span></p>
                                         </div>

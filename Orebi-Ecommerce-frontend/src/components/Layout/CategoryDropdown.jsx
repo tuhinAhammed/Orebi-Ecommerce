@@ -1,7 +1,7 @@
 import React, { Children, useEffect } from 'react'
 import { useState } from 'react'
 import { IoMdArrowDropdownCircle } from 'react-icons/io'
-import Flex from '../Layout/Flex'
+import Flex from './Flex'
 // import SubCategoryDropdown from './SubCategoryDropdown'
 import axios from "axios"
 

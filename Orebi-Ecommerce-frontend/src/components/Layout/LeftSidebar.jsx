@@ -1,7 +1,7 @@
 import React from 'react'
 
 import ShopByCategory from "./ShopByCategory"
-import Flex from "../Layout/Flex"
+import Flex from "./Flex"
 import { IoMdArrowDropdownCircle } from "react-icons/io";
 import { useState } from 'react';
 import ShopByColor from './ShopByColor';
