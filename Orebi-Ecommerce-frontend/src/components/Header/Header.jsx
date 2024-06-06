@@ -109,12 +109,7 @@ const Header = () => {
                                         <div className="total-price pt-[34px] pb-[13px]">
                                             <p className='text-base'>Subtotal: <span className='font-bold'>$44.00</span></p>
                                         </div>
-                                        <div className="button-List flex justify-between">
-                                            <button className='btn px-[40px] py-[16px] bg-transparent border-primary text-sm font-bold text-primary border'>View Cart</button>
-                                            <button className='btn px-[40px] py-[16px] bg-primary text-sm font-bold text-tertiary'>View Cart</button>
 
-
-                                        </div>
                                     </div>
                                 )
                             }
